@@ -89,9 +89,51 @@
 
     function showHelp(level) {
       let msg = "Stay calm";
-      if (level === "High") msg = "Take deep breaths 😮‍💨 | Relax";
-      else if (level === "Moderate") msg = "Slow breathing";
-      else msg = "You are fine 😊";
+
+      if (level === "High") {
+        msg = "⚠️ High Stress Detected
+
+" +
+              "• Sit down in a comfortable position
+" +
+              "• Take slow deep breaths (inhale 4 sec, exhale 6 sec) 😮‍💨
+" +
+              "• Close your eyes and relax your muscles
+" +
+              "• Drink some water 💧
+" +
+              "• Avoid sudden movements
+" +
+              "• Focus on something calming (music or silence)
+" +
+              "• If possible, move to a quiet place";
+      } 
+      else if (level === "Moderate") {
+        msg = "⚠️ Moderate Stress
+
+" +
+              "• Slow down your breathing
+" +
+              "• Take a short break from activity
+" +
+              "• Stretch your body gently
+" +
+              "• Drink water 💧
+" +
+              "• Try to relax your mind";
+      } 
+      else {
+        msg = "✅ Normal Condition
+
+" +
+              "• You are doing fine 😊
+" +
+              "• Maintain steady breathing
+" +
+              "• Stay hydrated
+" +
+              "• Continue your activity calmly";
+      }
 
       document.getElementById('help').innerText = msg;
     }
